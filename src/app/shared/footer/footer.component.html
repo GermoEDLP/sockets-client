@@ -1,0 +1,6 @@
+
+<footer class="bg-dark text-white">
+  <span>Servidor: </span>
+  <span class="text-success" *ngIf="wsSvc.socketStatus" >Activo</span>
+  <span class="text-danger" *ngIf="!wsSvc.socketStatus" >Inactivo</span>
+</footer>

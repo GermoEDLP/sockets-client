@@ -1,0 +1,19 @@
+<div class="mt-4">
+  <h3>Envio de mensajes</h3>
+</div>
+
+<div id="chat-mensajes">
+  <li class="list-group-item" *ngFor="let msg of messages">
+    {{ msg.to }} - {{ msg.cuerpo }}
+  </li>
+</div>
+
+
+<form (ngSubmit)="enviar()" class="mt-3 chat-input">
+  <div class="form-group">
+    <label for="cuerpo">Mensaje:</label>
+    <input [(ngModel)]="cuerpo" name="cuerpo" type="text" class="form-control" id="cuerpo" aria-describedby="cuerpoHelp" placeholder="Mensaje...">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
